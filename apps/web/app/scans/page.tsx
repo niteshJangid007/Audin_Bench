@@ -3,9 +3,9 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { FileSearch, Clock, ArrowRight } from "lucide-react";
-import { api, Scan } from "../../lib/api-client";
-import { StatusBadge } from "../../components/SeverityBadge";
-import { ScoreGauge } from "../../components/ScoreGauge";
+import { api, Scan } from "@/lib/api-client";
+import { StatusBadge } from "@/components/SeverityBadge";
+import { ScoreGauge } from "@/components/ScoreGauge";
 
 export default function ScansPage() {
   const [scans, setScans] = useState<Scan[]>([]);

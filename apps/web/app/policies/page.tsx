@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Sliders, ShieldCheck, Save, Check } from "lucide-react";
-import { api, SecurityPolicy } from "../../lib/api-client";
+import { api, SecurityPolicy } from "@/lib/api-client";
 
 export default function PoliciesPage() {
   const [policies, setPolicies] = useState<SecurityPolicy[]>([]);

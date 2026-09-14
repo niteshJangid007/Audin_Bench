@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Github, CheckCircle2, ShieldAlert, Key, Webhook, RefreshCw } from "lucide-react";
-import { api } from "../../../lib/api-client";
+import { api } from "@/lib/api-client";
 
 export default function GitHubSettingsPage() {
   const [status, setStatus] = useState<any>(null);

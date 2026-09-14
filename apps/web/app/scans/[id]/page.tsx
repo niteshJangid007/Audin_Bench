@@ -13,10 +13,10 @@ import {
   CheckCircle2,
   XCircle,
 } from "lucide-react";
-import { api, Scan, Finding } from "../../../lib/api-client";
-import { SeverityBadge, StatusBadge } from "../../../components/SeverityBadge";
-import { ScoreGauge } from "../../../components/ScoreGauge";
-import FindingDrawer from "../../../components/FindingDrawer";
+import { api, Scan, Finding } from "@/lib/api-client";
+import { SeverityBadge, StatusBadge } from "@/components/SeverityBadge";
+import { ScoreGauge } from "@/components/ScoreGauge";
+import FindingDrawer from "@/components/FindingDrawer";
 
 export default function ScanDetailPage() {
   const params = useParams();

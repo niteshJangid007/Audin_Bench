@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { FileText, Download, Printer, ShieldCheck, ShieldAlert } from "lucide-react";
-import { api, Scan } from "../../lib/api-client";
-import { ScoreGauge } from "../../components/ScoreGauge";
-import { StatusBadge } from "../../components/SeverityBadge";
+import { api, Scan } from "@/lib/api-client";
+import { ScoreGauge } from "@/components/ScoreGauge";
+import { StatusBadge } from "@/components/SeverityBadge";
 
 export default function ReportsPage() {
   const [scans, setScans] = useState<Scan[]>([]);

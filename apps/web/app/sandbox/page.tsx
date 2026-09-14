@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import { Terminal, Play, ShieldAlert, CheckCircle2, RotateCcw, AlertTriangle } from "lucide-react";
-import { api, Finding } from "../../lib/api-client";
-import { SeverityBadge, StatusBadge } from "../../components/SeverityBadge";
-import { ScoreGauge } from "../../components/ScoreGauge";
-import FindingDrawer from "../../components/FindingDrawer";
+import { api, Finding } from "@/lib/api-client";
+import { SeverityBadge, StatusBadge } from "@/components/SeverityBadge";
+import { ScoreGauge } from "@/components/ScoreGauge";
+import FindingDrawer from "@/components/FindingDrawer";
 
 const SAMPLE_VULNERABLE_CODE = `// Sample High-Risk Payment Processing Service
 const express = require("express");

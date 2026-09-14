@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { GitBranch, Play, ShieldAlert, CheckCircle, Clock } from "lucide-react";
-import { api, Repository } from "../../lib/api-client";
-import { StatusBadge } from "../../components/SeverityBadge";
-import { ScoreGauge } from "../../components/ScoreGauge";
+import { api, Repository } from "@/lib/api-client";
+import { StatusBadge } from "@/components/SeverityBadge";
+import { ScoreGauge } from "@/components/ScoreGauge";
 
 export default function RepositoriesPage() {
   const [repos, setRepos] = useState<Repository[]>([]);

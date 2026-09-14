@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { ShieldAlert, Search, Filter } from "lucide-react";
-import { api, Finding } from "../../lib/api-client";
-import { SeverityBadge, StatusBadge } from "../../components/SeverityBadge";
-import FindingDrawer from "../../components/FindingDrawer";
+import { api, Finding } from "@/lib/api-client";
+import { SeverityBadge, StatusBadge } from "@/components/SeverityBadge";
+import FindingDrawer from "@/components/FindingDrawer";
 
 export default function FindingsPage() {
   const [findings, setFindings] = useState<Finding[]>([]);

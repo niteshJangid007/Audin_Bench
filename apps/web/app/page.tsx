@@ -12,9 +12,9 @@ import {
   Clock,
   Play,
 } from "lucide-react";
-import { api, Repository, Scan, Finding } from "../lib/api-client";
-import { SeverityBadge, StatusBadge } from "../components/SeverityBadge";
-import { ScoreGauge } from "../components/ScoreGauge";
+import { api, Repository, Scan, Finding } from "@/lib/api-client";
+import { SeverityBadge, StatusBadge } from "@/components/SeverityBadge";
+import { ScoreGauge } from "@/components/ScoreGauge";
 
 export default function DashboardPage() {
   const [repos, setRepos] = useState<Repository[]>([]);
