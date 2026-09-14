@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SecurityPolicy",
+  "type": "object",
+  "required": ["minimum_score", "fail_on_critical", "max_high", "fail_on_secrets", "fail_on_new_findings"],
+  "properties": {
+    "minimum_score":        { "type": "integer", "minimum": 0, "maximum": 100 },
+    "fail_on_critical":     { "type": "boolean" },
+    "max_high":             { "type": "integer", "minimum": 0 },
+    "max_medium":           { "type": "integer", "minimum": 0 },
+    "max_low":              { "type": "integer", "minimum": 0 },
+    "fail_on_secrets":      { "type": "boolean" },
+    "fail_on_new_findings": { "type": "boolean", "description": "FAIL if scan introduces any finding not present in prior scan" }
+  },
+  "additionalProperties": false
+}

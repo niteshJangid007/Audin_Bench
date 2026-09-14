@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Finding",
+  "type": "object",
+  "required": [
+    "finding_id", "rule_id", "scanner", "title", "category", "owasp_id",
+    "owasp_name", "severity", "confidence", "status", "fingerprint", "detected_at"
+  ],
+  "properties": {
+    "finding_id":  { "type": "string", "format": "uuid" },
+    "rule_id":     { "type": "string" },
+    "scanner":     { "type": "string", "enum": ["semgrep", "trivy", "gitleaks", "custom"] },
+    "title":       { "type": "string" },
+    "category":    { "type": "string" },
+    "owasp_id":    { "type": ["string", "null"] },
+    "owasp_name":  { "type": ["string", "null"] },
+    "severity":    { "type": "string", "enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW"] },
+    "confidence":  { "type": "string", "enum": ["HIGH", "MEDIUM", "LOW"] },
+    "file_path":   { "type": ["string", "null"] },
+    "line_start":  { "type": ["integer", "null"] },
+    "line_end":    { "type": ["integer", "null"] },
+    "evidence":    { "type": ["string", "null"], "description": "Exact matched snippet/context, truncated" },
+    "description": { "type": ["string", "null"] },
+    "impact":      { "type": ["string", "null"] },
+    "remediation": { "type": ["string", "null"] },
+    "status":      { "type": "string", "enum": ["OPEN", "RESOLVED", "REOPENED"] },
+    "fingerprint": { "type": "string", "description": "sha256 of rule_id + normalized file path + normalized location + evidence" },
+    "detected_at": { "type": "string", "format": "date-time" },
+    "resolved_at": { "type": ["string", "null"], "format": "date-time" }
+  },
+  "additionalProperties": false
+}
